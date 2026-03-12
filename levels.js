@@ -1,17 +1,21 @@
+/* ---------- Level creation ---------- */
 function createLevel(levelNumber) {
-  const rectangles = [];
-  const rectCount = 16 + (levelNumber - 1) * 4;
+  const rects = [];
 
-  for (let i = 0; i < rectCount; i++) {
-    const keyChar = i % 2 === 0 ? "F" : "J"; // fixed lanes
-    const lane = keyChar === "F" ? width / 4 - 25 : (3 * width) / 4 - 25;
-    rectangles.push({
-      x: lane,
-      y: -i * 80, // spaced apart
-      key: keyChar,
-      hit: false,
-    });
+  if (levelNumber === 1) {
+    // Level 1: start empty, rectangles will spawn dynamically in sketch.js
+  } else {
+    // Example static levels for Level 2+
+    const lanePositions = [150, 450]; // example X positions
+    const keys = ["F", "J"];
+
+    for (let i = 0; i < levelNumber * 10; i++) {
+      const key = random(keys);
+      const x = key === "F" ? lanePositions[0] : lanePositions[1];
+      const y = -i * 100; // staggered start
+      rects.push({ x, y, key, hit: false });
+    }
   }
 
-  return rectangles;
+  return rects;
 }
