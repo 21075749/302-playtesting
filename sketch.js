@@ -1,6 +1,9 @@
 let rectangles = [];
 let barY;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f7644b7b64a178c4456d819351f9de87dbe94992
 const rectWidth = 100;
 const rectHeight = 30;
 

@@ -8,9 +8,23 @@
 /* ===== Page body (default for game screen) ===== */
 body {
   margin: 0;
+<<<<<<< HEAD
   padding: 0; /* remove vertical padding so child backgrounds fill screen */
   font-family: Arial, sans-serif;
   color: white;
+=======
+  padding: 0;
+
+  /* Splash background */
+  background: url("cyberbg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* Center everything */
+>>>>>>> f7644b7b64a178c4456d819351f9de87dbe94992
   display: flex;
   flex-direction: column;
   align-items: center;
