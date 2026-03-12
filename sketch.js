@@ -1,6 +1,6 @@
 let rectangles = [];
 let barY;
-const rectWidth = 90;
+const rectWidth = 100;
 const rectHeight = 30;
 let speed = 3;
 let level = 1;
